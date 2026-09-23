@@ -1,0 +1,7 @@
+# OS/editor cruft at the monorepo root
+.DS_Store
+.vscode/
+.idea/
+
+# Stray Windows download sidecar files
+*:Zone.Identifier
