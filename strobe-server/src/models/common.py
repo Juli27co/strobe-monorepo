@@ -5,6 +5,8 @@ from typing import Any
 from ..config.database import get_database, save_database
 from ..config.settings import settings
 
+# This is a small change in the code to be captured by custodian
+# We need a comment in  readme file pointing to this file the file with new changes
 
 def db() -> dict[str, Any]:
     """Return the active in-memory database object."""
