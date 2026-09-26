@@ -74,3 +74,8 @@ async def hide_single_post(id: str, current_user: dict = Depends(require_moderat
     """POST /v1/posts/{id}/hide: Moderator-only post hide action."""
     status_code, body = hide_post_controller(id, current_user["userId"], current_user["userRole"])
     return JSONResponse(status_code=status_code, content=body)
+
+@router.post("/{id}/test")
+async def hide_single_post(id: str, current_user: dict = Depends(require_moderator)) -> dict:
+    """POST /v1/posts/{id}/test: Moderator-only post test action."""
+    return "test"
